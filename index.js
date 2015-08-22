@@ -15,6 +15,10 @@ else{
 	var ignore = function(){};
 }
 
+if( false === fs.existsSync('lib') ){
+	fs.mkdirSync('lib');
+}
+
 // faudrais plutot test si c'est un symlink
 if( false === fs.existsSync('lib/modules') ){
 	if( meta.dependencies ){
